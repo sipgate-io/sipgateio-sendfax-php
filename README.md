@@ -25,7 +25,7 @@ Create the `.env` by copying the [`.env.example`](.env.example) and set the valu
 
 The token should have the `sessions:fax:write` scope. For more information about personal access tokens visit https://www.sipgate.io/rest-api/authentication#personalAccessToken.
 
-The `FAX_ID` uniquely identifies the extension from which you wish to send your message. Further explanation is given in the section [Web Fax Extensions](#web-fax-extensions).
+The `FAXLINE_ID` uniquely identifies the extension from which you wish to send your message. Further explanation is given in the section [Web Fax Extensions](#web-fax-extensions).
 
 > **Optional:**
 > In order to send a delayed message uncomment the following line in [SendFax.php](./src/SendFax.php) and set the desired date and time in the future (up to one month):
