@@ -16,3 +16,6 @@ composer.phar
 .idea
 
 # End of https://www.gitignore.io/api/composer,phpstorm
+
+# Environment Variables
+.env
