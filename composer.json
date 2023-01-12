@@ -1,0 +1,22 @@
+{
+	"name": "sipgate/sipgateio-sendfax-php",
+	"description": "A demonstration of how to send a Fax via sipgate.io",
+	"minimum-stability": "stable",
+	"license": "unlicense",
+	"authors": [
+		{
+			"name": "sipgate.io Team",
+			"email": "io-team@sipgate.de"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Sipgate\\Io\\Example\\SendFax\\": "src/"
+		}
+	},
+	"require": {
+		"kitetail/zttp": ">=v0.6.0",
+		"php": ">=7.0",
+		"vlucas/phpdotenv": "^5.4"
+	}
+}
