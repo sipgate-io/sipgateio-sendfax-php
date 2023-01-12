@@ -5,16 +5,18 @@ namespace Sipgate\Io\Example\SendFax\Dto;
 class Fax
 {
     protected $faxlineId;
-    protected $base64Content;
     protected $recipient;
+    protected $base64Content;
     protected $fileName;
 
-    public function __construct($faxlineId, $base64Content, $recipient, $fileName)
+    public function __construct($faxlineId, $recipient, $filePath)
     {
         $this->faxlineId = $faxlineId;
-        $this->base64Content = $base64Content;
         $this->recipient = $recipient;
-        $this->fileName = $fileName;
+
+        $fileContent = file_get_contents($filePath);
+        $this->base64Content = base64_encode($fileContent);
+        $this->fileName = basename($filePath);
     }
 
     public function toArray()
@@ -23,7 +25,7 @@ class Fax
             "faxlineId" => $this->faxlineId,
             "base64Content" => $this->base64Content,
             "recipient" => $this->recipient,
-            "fileName" => $this->fileName
+            "filename" => $this->fileName
         ];
     }
 }
